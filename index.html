@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiago Figueiredo | Corretor de Imóveis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#132035',
+                            gold: '#cca356',
+                            goldhover: '#b58f48',
+                            light: '#f4f4f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap');
+    </style>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans">
 
+    <nav class="bg-brand-blue shadow-lg p-4 sticky top-0 z-50 border-b border-brand-gold/30">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <h1 class="text-2xl font-serif font-bold text-brand-gold tracking-widest uppercase">Tiago Figueiredo</h1>
+                <p class="text-xs text-brand-gold tracking-widest uppercase opacity-80">Corretor de Imóveis</p>
+            </div>
+            
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-sm text-gray-300 uppercase tracking-wider">
+                <li><a href="#" class="hover:text-brand-gold transition duration-300">Home</a></li>
+                <li><a href="#imoveis" class="hover:text-brand-gold transition duration-300">Imóveis</a></li>
+                <li><a href="#localizacao" class="hover:text-brand-gold transition duration-300">Localização</a></li>
+                <li><a href="#contato" class="hover:text-brand-gold transition duration-300">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="relative bg-brand-blue text-white py-32 px-4 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(19, 32, 53, 0.8), rgba(19, 32, 53, 0.9)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container mx-auto relative z-10">
+            <h2 class="text-4xl md:text-6xl font-serif font-bold text-brand-gold mb-6 drop-shadow-lg">Sua chave para o imóvel perfeito.</h2>
+            <p class="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl mx-auto font-light">Atendimento exclusivo e imóveis de alto padrão selecionados para o seu estilo de vida.</p>
+            
+            <a href="#imoveis" class="inline-block border-2 border-brand-gold text-brand-gold px-8 py-3 rounded uppercase tracking-wider font-semibold hover:bg-brand-gold hover:text-brand-blue transition duration-300">
+                Ver Imóveis
+            </a>
+        </div>
+    </header>
+
+    <section id="imoveis" class="container mx-auto py-20 px-4">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-serif font-bold text-brand-blue uppercase tracking-wide">Imóveis em Destaque</h3>
+            <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        </div>
+        
+        <div id="properties-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Imóveis serão carregados aqui via JavaScript -->
+        </div>
+    </section>
+
+    <section id="localizacao" class="bg-brand-blue py-16 px-4 border-t border-brand-gold/20">
+        <div class="container mx-auto">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-serif font-bold text-brand-gold uppercase tracking-wide">Onde Estamos</h3>
+                <p class="text-gray-300 mt-2">Venha tomar um café e conversar sobre o seu próximo imóvel.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white p-2 rounded shadow-2xl">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15551.464402652873!2d-38.468206!3d-12.98048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b0460c4bc43%3A0x6b447814b7e8d6bd!2sCaminho%20das%20%C3%81rvores%2C%20Salvador%20-%20BA!5e0!3m2!1spt-BR!2sbr!4v1710600000000!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-[#0c1422] text-white pt-16 pb-8 px-4 border-t border-brand-gold/30">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="text-center md:text-left">
+                <h1 class="text-2xl font-serif font-bold text-brand-gold tracking-widest uppercase mb-2">Tiago Figueiredo</h1>
+                <p class="text-sm text-gray-400 mb-4">Corretor de Imóveis Especialista em Alto Padrão.</p>
+            </div>
+            
+            <div class="text-center md:text-left">
+                <h4 class="text-lg font-bold text-brand-gold mb-4 uppercase tracking-wider">Contato</h4>
+                <p class="text-gray-400 mb-2">📞 (71) 99999-9999</p>
+                <p class="text-gray-400 mb-2">✉️ contato@tiagofigueiredo.com.br</p>
+                <p class="text-gray-400">📍 Salvador, BA</p>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h4 class="text-lg font-bold text-brand-gold mb-4 uppercase tracking-wider">Fale Agora</h4>
+                <p class="text-gray-400 mb-4 text-sm">Pronto para encontrar seu novo lar? Me chame no WhatsApp.</p>
+                <a href="https://wa.me/5571999999999" target="_blank" class="inline-block bg-brand-gold text-brand-blue px-6 py-2 rounded font-bold uppercase tracking-wider hover:bg-brand-goldhover transition duration-300">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-8 text-center">
+            <p class="text-brand-gold font-serif text-lg mb-1">Tiago Figueiredo - Corretor Responsável</p>
+            <p class="text-white font-bold tracking-widest mb-4">CRECI 36.833</p>
+            <p class="text-xs text-gray-500 uppercase tracking-widest">&copy; 2024 Tiago Figueiredo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carregar e exibir imóveis
+        async function loadProperties() {
+            try {
+                const response = await fetch('/admin/data/properties.json');
+                const data = await response.json();
+                const container = document.getElementById('properties-container');
+                
+                container.innerHTML = data.properties.map(property => `
+                    <div class="bg-white rounded shadow-lg overflow-hidden group border border-gray-200">
+                        <div class="relative overflow-hidden">
+                            <img src="${property.image}" alt="${property.name}" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                            <div class="absolute top-4 right-4 bg-brand-blue text-brand-gold text-xs font-bold px-3 py-1 rounded uppercase">${property.type}</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-brand-blue mb-2">${property.name}</h4>
+                            <p class="text-gray-500 text-sm mb-4">${property.location}</p>
+                            <div class="flex justify-between text-sm text-gray-600 mb-6 border-y border-gray-100 py-3">
+                                <span>🛏️ ${property.bedrooms}</span>
+                                <span>🚗 ${property.parking}</span>
+                                <span>📐 ${property.area}</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-gold">R$ ${property.price}</span>
+                                <button class="text-brand-blue hover:text-brand-gold font-semibold transition">Detalhes &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Erro ao carregar imóveis:', error);
+            }
+        }
+        
+        // Carregar propriedades ao iniciar
+        document.addEventListener('DOMContentLoaded', loadProperties);
+    </script>
+
+</body>
+</html>
